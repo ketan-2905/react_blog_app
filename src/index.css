@@ -39,6 +39,18 @@ body {
   box-shadow: 0px 0px 15px gray;
 }
 
+.btns{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btns a button{
+  background-color: #66d8f5;
+  color:#000;
+}
+
 .Header, .Footer {
   width: 100%;
   background-color: #66d8f5;
@@ -73,7 +85,7 @@ body {
 
 .searchForm {
   width: 80%;
-  padding: 1rem 0 0 0.75rem;
+  padding: 0.5rem 0;
 }
 
 .searchForm input[type="text"] {
@@ -108,25 +120,25 @@ body {
   padding: 1rem;
 }
 
-.Nav li a {
+.Nav li a{
   color: #fff;
   text-decoration: none;
 }
 
-.Nav li:hover, 
+/* .Nav li:hover, 
 .Nav li:focus, 
 .Nav li:hover a, 
 .Nav li:focus a  {
   background-color: #eee;
   color: #333;
-}
+} */
 
 .Nav li:hover a, 
 .Nav li:focus a {
   cursor: pointer;
 }
 
-.Home, .NewPost, .PostPage, .About, .Missing {
+.Home, .EditPost , .NewPost, .PostPage, .About, .Missing {
   width: 100%;
   flex-grow: 1;
   padding: 1rem;
@@ -201,8 +213,8 @@ body {
   cursor: pointer;
 }
 
-.Missing h2, .PostPage h2, 
-.Missing p, .PostPage p {
+.Missing h2, .PostPage h2, .EditPost h2,
+.Missing p, .PostPage p,.EditPost p {
   margin-bottom: 1rem;
 }
 
@@ -216,6 +228,20 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
+.EditPost button {
+  height: 48px;
+  width: 6rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #50d6ee;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
 
 .statusMsg {
   margin-top: 2rem;
@@ -241,13 +267,13 @@ body {
     text-align: right;
   }
 
-  .Nav li:hover, 
+  /* .Nav li:hover, 
   .Nav li:focus, 
   .Nav li:hover a, 
   .Nav li:focus a  {
     background-color: #eee;
     color: #333;
-  }
+  } */
 
   .searchForm {
     width: 50%;
@@ -269,4 +295,12 @@ body {
     font-size: 3rem;
   }
 
+}
+
+.hover{
+  background-color: #eee;
+}
+
+.Nav .hover a{
+  color: #333;
 }

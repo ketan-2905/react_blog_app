@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Nav = ({searchPost , setSearchPost}) => {
+const Nav = ({searchPost , setSearchPost,location}) => {
   return (
     <nav className='Nav'>
       <form className='searchForm' onSubmit={(e) => e.preventDefault()}>
@@ -15,9 +15,9 @@ const Nav = ({searchPost , setSearchPost}) => {
         />
       </form>
       <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/post'>Post</Link></li>
-        <li><Link to='/about'>About</Link></li>
+      <li className={(location.pathname=='/' || location.pathname.includes('/post/'))? 'hover':''} ><Link to='/'>Home</Link></li>
+        <li className={(location.pathname == '/post')? 'hover':''}><Link  to='/post'>Post</Link></li>
+        <li className={(location.pathname == '/about')? 'hover':''}><Link  to='/about'>About</Link></li>
       </ul>
     </nav>
   )
